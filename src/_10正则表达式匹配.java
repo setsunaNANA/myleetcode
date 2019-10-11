@@ -9,8 +9,9 @@ public class _10正则表达式匹配 {
             }
         }
         for (int i = 1; i <=s.length() ; i++) {
+            int I=i-1;
             for (int j = 1; j <=p.length() ; j++) {
-                int I=i-1;
+
                 int J=j-1;
                 if (s.charAt(I) == p.charAt(J)|| p.charAt(J)=='.') {
                     dp[i][j]=dp[i-1][j-1];
@@ -19,7 +20,13 @@ public class _10正则表达式匹配 {
                     if (J>=1&&(s.charAt(I) == p.charAt(J-1)||p.charAt(J-1)=='.')) {
                         dp[i][j]=dp[i-1][j-1];
                     }
-                    if (J>2&&(s.charAt(I) == p.charAt(J-2)||p.charAt(J-1)=='.')) {
+                    if (J>=2&&(s.charAt(I) == p.charAt(J-2)||p.charAt(J-1)=='.')) {
+                        dp[i][j]=dp[i][j-2];
+                    }
+                    if(J>=1&&dp[i][j-1]){
+                        dp[i][j]=dp[i][j-1];
+                    }
+                    if(J>=2&&dp[i][j-2]){
                         dp[i][j]=dp[i][j-2];
                     }
                 }
@@ -31,7 +38,7 @@ public class _10正则表达式匹配 {
     public static void main(String[] args) {
         _10正则表达式匹配 a= new _10正则表达式匹配();
         String s="aaa";
-        String p="ab*ac*a";
+        String p=".*";
         System.out.println(a.isMatch(s, p));
     }
 }
