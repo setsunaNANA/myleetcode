@@ -10,7 +10,7 @@ nums2 = [2]
 |1
 2 2| 3 4
  */
-
+//asdsadadds
 public class _4寻找两个有序数组的中位数 {
     /**public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         if(nums1.length>nums2.length)return findMedianSortedArrays(nums2, nums1);
