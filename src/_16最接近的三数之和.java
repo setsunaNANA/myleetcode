@@ -17,6 +17,11 @@ public class _16最接近的三数之和 {
                     res=sum;
                     while (low < high&&low!=nums.length-2&&nums[low] == nums[low + 2]) low++;
                     while (low < high&&nums[high] == nums[high - 2]) high--;
+                    /*
+                    +2 -2而不是+1 -1是因为这里是找最接近的，当前最接近并不代表全局最接近
+                    所以不能把这些元素都跳过  low=low+2判断 是为high留一个位置
+                    同理 high=high-2 是为给low留一个位置
+                     */
                 }
                 if (sum < target) {
                     low++;
