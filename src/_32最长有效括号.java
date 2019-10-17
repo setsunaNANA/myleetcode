@@ -3,7 +3,7 @@ import java.util.HashSet;
 import java.util.Stack;
 
 public class _32最长有效括号 {
-    public int longestValidParentheses(String s) {
+    /*public int longestValidParentheses(String s) {
         if (s == null||s.length()==0) {
             return 0;
         }
@@ -24,7 +24,33 @@ public class _32最长有效括号 {
             }
         }
         return max;
+    }*/
+    public int longestValidParentheses(String s) {
+        Stack<Integer> stack=new Stack<>();
+        int start=-1;//记录这一轮匹配开始的元素的前一个位置
+        int max=0;
+        for (int i = 0; i <s.length() ; i++) {
+            if (s.charAt(i) == '(') {
+                stack.push(i);
+            }
+            else {
+                if (stack.empty()) {
+                    start=i; //说明本次匹配失败，更新start
+                }
+                else {
+                    stack.pop();
+                    if (stack.empty()) {
+                        max=Math.max(max, i-start)  ;
+                    }
+                    else {
+                        max=Math.max(max, i-stack.peek())  ;
+                    }
+                }
+            }
+        }
+        return max;
     }
+
 
     public static void main(String[] args) {
         _32最长有效括号 a=new _32最长有效括号();
