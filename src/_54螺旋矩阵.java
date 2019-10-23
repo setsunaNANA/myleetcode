@@ -38,24 +38,6 @@ public class _54螺旋矩阵 {
                 res.add(matrix[i][colbegin]);
             }
         }
-
-        /*
-        if (rowbegin+1 <= rowend) {
-
-            for (int i = rowbegin+1; i <=rowend ; i++) {
-                res.add(matrix[i][colend]);
-            }
-            if (colbegin <= colend-1) {
-                for (int i = colend-1; i >=colbegin ; i--) {
-                    res.add(matrix[rowend][i]);
-                }
-                    if (rowend-1 <= rowbegin+1) {
-                        for (int i = rowend-1; i >=rowbegin+1 ; i--) {
-                            res.add(matrix[i][colbegin]);
-                     }
-                 }
-              }
-        }*/
     }
 
     public static void main(String[] args) {
