@@ -1,7 +1,7 @@
 import jdk.dynalink.beans.StaticClass;
 
     import java.util.Scanner;
-
+//合并分支
 public class test {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
