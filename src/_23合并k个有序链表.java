@@ -3,7 +3,7 @@ public class _23合并k个有序链表 {
         if (lists == null||lists.length==0) {
             return null;
         }
-        return mergesort(lists, 0, lists.length-1);
+        return mergesort(lists,0,lists.length-1);
     }
 
     ListNode mergesort(ListNode[] lists,int start,int end){
@@ -14,10 +14,9 @@ public class _23合并k个有序链表 {
         ListNode l1=mergesort(lists, start,mid);
         ListNode l2=mergesort(lists, mid+1,end);
         return mergeTwoLists(l1, l2);
-
     }
 
-     ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null) {
             return l2;
         }
@@ -32,5 +31,6 @@ public class _23合并k个有序链表 {
             l2.next = mergeTwoLists(l1, l2.next);
             return l2;
         }
+
     }
 }
