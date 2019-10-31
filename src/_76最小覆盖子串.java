@@ -17,7 +17,6 @@ public class _76最小覆盖子串 {
             }
             else  tmap.put(t.charAt(i),1);
         }
-
         int minlen=Integer.MAX_VALUE;
         int minindex=0;
         boolean flag=false;
