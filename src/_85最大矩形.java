@@ -27,7 +27,8 @@ public class _85最大矩形 {
                 if (matrix[row][col] == '1') {
                     //和上次出现 0 的位置比较
                     leftLessMin[col] = Math.max(leftLessMin[col], boundary);
-                } else {
+                }
+                else {
                     //当前是 0 代表当前高度是 0，所以初始化为 -1，防止对下次循环的影响
                     leftLessMin[col] = -1;
                     //更新 0 的位置
