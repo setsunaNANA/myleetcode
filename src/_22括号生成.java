@@ -10,14 +10,15 @@ public class _22括号生成 {
         help(n, stack, tlist);
         return res;
     }
-     void help(int n,Stack stack,ArrayList <Character>tlist){
+     void help(int n,Stack stack,List <Character>tlist){
 
+        StringBuilder str=new StringBuilder("");
          if (n == 0&&stack.isEmpty()) {
-             for (char c:tlist.toArray()
+             for (Character a:tlist
                   ) {
-
+                 str.append(a);
              }
-             res.add(String.valueOf(tlist.toArray()));
+             res.add(str.toString());
              return;
          }
          else if (n == 0) {
@@ -41,14 +42,18 @@ public class _22括号生成 {
              stack.pop();
          }
          else {
+             stack.push(1);
              help(n-1, stack,tlist);
              stack.pop();
-             tlist.add('(');
-             tlist.add(')');
-             help(n, stack,tlist);
-             stack.push(1);
-             tlist.remove(tlist.size()-1);
-             tlist.remove(tlist.size()-1);
+             if (!stack.isEmpty()) {
+                 stack.pop();
+                 tlist.add('(');
+                 tlist.add(')');
+                 help(n, stack,tlist);
+                 stack.push(1);
+                 tlist.remove(tlist.size()-1);
+                 tlist.remove(tlist.size()-1);
+             }
          }
 
      }

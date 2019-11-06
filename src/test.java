@@ -5,9 +5,10 @@ import java.util.Scanner;
 //合并分支
 public class test {
     public static void main(String[] args) {
-        int[] b = new int[10];
-        b[0] = 1;
-        System.out.println(b.length);
+        ArrayList <Integer>mm= new ArrayList<>(10);
+        System.out.println("asdasd");
+        mm.add(970109);
+        mm.remove(-1);
         Scanner input = new Scanner(System.in);
         int len = input.nextInt();
         int[] v = new int[len];
