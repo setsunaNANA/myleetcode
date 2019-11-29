@@ -10,7 +10,7 @@ public class _322零钱兑换 {
             for (int j = 0; j <amount+1 ; j++) {
                 dp[i][j]=Integer.MAX_VALUE;
             }
-        }//dp[amount][i]=min{dp[amount-k*coins[i]][i-1]+k}
+        }
         for (int i = 0; i <=amount ; i++) {
             if (i%coins[0]==0) {
                 dp[0][i]=i/coins[0];
