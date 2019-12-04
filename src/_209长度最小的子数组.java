@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class _209长度最小的子数组 {
     public int minSubArrayLen(int s, int[] nums) {
@@ -31,8 +32,16 @@ public class _209长度最小的子数组 {
         return min;
     }
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int len=input.nextInt();
+        int [] nums=new int[len] ;
+        for (int i = 0; i < len; i++) {
+            nums[i]=input.nextInt();
+        }
+        int sum=input.nextInt();
+        input.close();
         _209长度最小的子数组 a=new _209长度最小的子数组();
-        System.out.println(a.minSubArrayLen(80, new int[]{10,5,13,4,8,4,5,11,14,9,16,10,20,8}));
+        System.out.println(a.minSubArrayLen(sum, nums));
     }
 }
 
