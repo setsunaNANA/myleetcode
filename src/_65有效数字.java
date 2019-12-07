@@ -6,6 +6,7 @@ public class _65有效数字 {
 
             }
         }
+        return false;
     }
     boolean isPositiveInteger(String s){
         if (s.length() == 0) {
