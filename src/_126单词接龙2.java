@@ -133,7 +133,7 @@ public class _126单词接龙2 {
         list.add("den");
         list.add("rex");
         list.add("pee");
-        a.findLadders("red","tax",list);
+        //a.findLadders("red","tax",list);
     }
 
 }
