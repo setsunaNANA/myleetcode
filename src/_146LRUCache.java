@@ -1,5 +1,3 @@
-package _146LRU缓存机制;
-
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -84,17 +82,16 @@ class LRUCache {
         dummytoil.pre=node;
         node.next=dummytoil;
     }
-}
+    private class Node{
+        int key;
+        int vaule;
+        Node pre,next;
+        Node(int key,int value){
+            this.key=key;
+            this.vaule=value;
+            pre=null;
+            next=null;
+        }
 
-class Node{
-    int key;
-    int vaule;
-    Node pre,next;
-    Node(int key,int value){
-        this.key=key;
-        this.vaule=value;
-        pre=null;
-        next=null;
     }
-
 }
