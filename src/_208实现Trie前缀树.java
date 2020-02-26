@@ -21,19 +21,6 @@ class Trie {
         }
         root.isEnd=true;
     }
-   /* public void insert(String word,Trie root) {
-        //System.out.println(word.charAt(0));
-        int index=word.charAt(0)-'a';
-        if (root.children[index]==null ){
-            root.children[index]=new Trie();
-        }
-        if (word.length() == 1) {
-            root.isEnd=true;
-            return;
-        }
-        else insert(word.substring(1),root.children[index]);
-    }*/
-
     /** Returns if the word is in the trie. */
     public boolean search(String word) {
         Trie root=this;
