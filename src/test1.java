@@ -12,12 +12,14 @@ import java.util.Map;
 import java.util.Stack;
 import java.util.TreeMap;
 import java.util.TreeSet;
+import java.util.concurrent.FutureTask;
 
 public class test1 {
     static final int N=100000;
     static final int n=100;
 
     public static void main(String[] args) {
+
         List<Integer> list=new ArrayList<Integer>();
         for(int i=0;i<N;i++) {
             list.add(i);
